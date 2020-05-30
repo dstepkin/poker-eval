@@ -11,27 +11,4 @@ public interface Cards {
      * @return list of cards as a single long number
      */
     long getCards();
-
-    enum Rank {
-        ACE,
-        KING,
-        QUEEN,
-        JACK,
-        TEN,
-        NINE,
-        EIGHT,
-        SEVEN,
-        SIX,
-        FIVE,
-        FOUR,
-        THREE,
-        TWO,
-    }
-
-    enum Suit {
-        SPADES,
-        HEARTS,
-        DIAMONDS,
-        CLUBS,
-    }
 }
