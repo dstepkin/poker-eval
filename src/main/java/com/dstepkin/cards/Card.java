@@ -4,7 +4,7 @@ public class Card implements Cards {
 
     private final long cards;
 
-    public Card(long cards) {
+    private Card(long cards) {
         this.cards = cards;
     }
 
