@@ -101,4 +101,52 @@ public class CardTest {
         Card card = Card.from(Cards.Rank.TWO, Cards.Suit.CLUBS);
         assertThat(card.getCards()).isEqualTo(0x8000000000000L);
     }
+
+    @Test
+    public void testAceRank() {
+        Card card = Card.from(Cards.Rank.ACE, Cards.Suit.SPADES);
+        assertThat(card.getRank()).isEqualTo(Cards.Rank.ACE);
+    }
+
+    @Test
+    public void testKingRank() {
+        Card card = Card.from(Cards.Rank.KING, Cards.Suit.SPADES);
+        assertThat(card.getRank()).isEqualTo(Cards.Rank.KING);
+    }
+
+    @Test
+    public void testTreyRank() {
+        Card card = Card.from(Cards.Rank.THREE, Cards.Suit.CLUBS);
+        assertThat(card.getRank()).isEqualTo(Cards.Rank.THREE);
+    }
+
+    @Test
+    public void testDeuceRank() {
+        Card card = Card.from(Cards.Rank.TWO, Cards.Suit.CLUBS);
+        assertThat(card.getRank()).isEqualTo(Cards.Rank.TWO);
+    }
+
+    @Test
+    public void testSpadesSuit() {
+        Card card = Card.from(Cards.Rank.ACE, Cards.Suit.SPADES);
+        assertThat(card.getSuit()).isEqualTo(Cards.Suit.SPADES);
+    }
+
+    @Test
+    public void testHeartsSuit() {
+        Card card = Card.from(Cards.Rank.KING, Cards.Suit.HEARTS);
+        assertThat(card.getSuit()).isEqualTo(Cards.Suit.HEARTS);
+    }
+
+    @Test
+    public void testDiamondsSuit() {
+        Card card = Card.from(Cards.Rank.THREE, Cards.Suit.DIAMONDS);
+        assertThat(card.getSuit()).isEqualTo(Cards.Suit.DIAMONDS);
+    }
+
+    @Test
+    public void testClubsSuit() {
+        Card card = Card.from(Cards.Rank.TWO, Cards.Suit.CLUBS);
+        assertThat(card.getSuit()).isEqualTo(Cards.Suit.CLUBS);
+    }
 }

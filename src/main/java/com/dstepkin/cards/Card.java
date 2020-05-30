@@ -12,6 +12,16 @@ public class Card implements Cards {
         return cards;
     }
 
+    public Rank getRank() {
+        int rankIndex = Long.numberOfTrailingZeros(cards) / Suit.values().length;
+        return Rank.values()[rankIndex];
+    }
+
+    public Suit getSuit() {
+        int suitIndex = Long.numberOfTrailingZeros(cards) % Suit.values().length;
+        return Suit.values()[suitIndex];
+    }
+
     public static Card from(Rank rank, Suit suit) {
         int shift = rank.ordinal() * Suit.values().length + suit.ordinal();
         long cardValue = 1L << shift;
